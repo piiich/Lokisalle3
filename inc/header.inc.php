@@ -32,7 +32,7 @@
               <li class="active"><a href="<?= RACINE_SITE ?>contact.php">Contact</a></li>
               </ul>
       <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="<?= RACINE_SITE ?>profil.php">Profil</a></li>
+                <li class="active"><a href="<?= RACINE_SITE ?>profil.php"><?= $_SESSION['membre']['pseudo'] ?></a></li>
               <li class="active"><a href="<?= RACINE_SITE ?>index.php?action=deconnexion">Déconnexion</a></li>          
       </ul>
     </div><!-- /.navbar-collapse -->
@@ -57,7 +57,7 @@
               <li class="active"><a href="<?= RACINE_SITE ?>contact.php">Contact</a></li>
               </ul>
       <ul class="nav navbar-nav navbar-right">
-                          <li class="active"><a href="<?= RACINE_SITE ?>profil.php">Profil</a></li>
+                          <li class="active"><a href="<?= RACINE_SITE ?>profil.php"><?= $_SESSION['membre']['pseudo'] ?></a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Gestion<b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -67,7 +67,7 @@
                   <li><a href="<?= RACINE_SITE ?>admin/gestion_des_avis.php">Avis</a></li>
                   <li><a href="<?= RACINE_SITE ?>admin/gestion_des_commandes.php">Commandes</a></li>
                 </ul>
-                <li class="active"><a href="#">Statistiques</a></li>
+                <li class="active"><a href="<?= RACINE_SITE ?>admin/statistique.php">Statistiques</a></li>
                 <li class="active"><a href="<?= RACINE_SITE ?>index.php?action=deconnexion">Déconnexion</a></li>
               </li>
       </ul>
