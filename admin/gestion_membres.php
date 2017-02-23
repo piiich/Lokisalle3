@@ -11,7 +11,7 @@ require_once('../inc/init.inc.php');
 if ($_POST) {
 
     if (isset($_GET['action']) && $_GET['action'] == 'modifier') {
-        $resultat = $pdo->prepare("REPLACE INTO membre (pseudo, mdp, nom, prenom, email, civilite, statut) VALUES(:pseudo, :mdp, :nom, :prenom, :email, :civilite, :statut)");
+        $resultat = $pdo->prepare("UPDATE membre SET pseudo=:pseudo, mdp=:mdp, nom=:nom, prenom=:prenom, email=:email, civilite=:civilite, statut=:statut WHERE id_membre=:id_membre");
 
         $resultat->bindParam(':id_membre', $_POST['id_membre'], PDO::PARAM_INT);
     } else {
@@ -134,6 +134,7 @@ $id_membre = (isset($membre_actuel)) ? $membre_actuel['id_membre'] : '';
 <h2 style="text-align: center;">Ajouter un membre</h2>
 <div class="formulaire">
     <form method="post" action="" enctype="multipart/form-data" class="formulaire_modif">
+        <input type="hidden" name="id_membre" value="<?= $id_membre ?>">
         <label>Pseudo : </label><br>
         <input type="text" name="pseudo" value="<?= $pseudo ?>"><br><br>
 
@@ -156,8 +157,10 @@ $id_membre = (isset($membre_actuel)) ? $membre_actuel['id_membre'] : '';
         </select><br><br>
 
         <label>Statut : </label><br>
-        <input type="text" name="statut" value="<?= $statut ?>"><br><br>
-
+        <select name="civilite">
+            <option value="0" <?= ($statut == '0') ? 'selected' : '' ?>>Client</option>
+            <option value="1" <?= ($statut == '1') ? 'selected' : '' ?>>Admin</option>
+        </select><br><br>
         <input type="submit" name="<?= $action ?>">
     </form>
     </div>

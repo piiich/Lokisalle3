@@ -11,18 +11,18 @@ require_once('../inc/init.inc.php');
 if ($_POST) {
 
     if (isset($_GET['action']) && $_GET['action'] == 'modifier') {
-        $resultat = $pdo -> prepare("REPLACE INTO commande (id_membre, id_produit, date_enregitrement, email, civilite, ville, code_postal, adresse, statut) VALUES(:id_membre, :id_produit, :date_enregitrement, :email, :civilite, :ville, :code_postal, :adresse, :statut)");
+        $resultat = $pdo -> prepare("UPDATE commande SET id_membre=:id_membre, id_produit=:id_produit, date_enregistrement=:date_enregistrement WHERE id_commande=:id_commande");
+        $resultat -> bindParam(':id_commande', $_POST['id_commande'], PDO::PARAM_INT);
 
-        $resultat -> bindParam(':id_membre', $_POST['id_membre'], PDO::PARAM_INT);
     }
     else{
-        $resultat = $pdo -> prepare("INSERT INTO commande (id_membre, id_produit, date_enregitrement, email, civilite, ville, code_postal, adresse, statut) VALUES(:id_membre, :id_produit, :date_enregitrement, :email, :civilite, :ville, :code_postal, :adresse, :statut)");
+        $resultat = $pdo -> prepare("INSERT INTO commande (id_membre, id_produit, date_enregistrement) VALUES(:id_membre, :id_produit, :date_enregistrement)");
     } // !!!!!!!!!!!!! FERMETURE DU ELSE !!!!!!!!!!!!!!
 
 
-    $resultat -> bindParam(':id_membre', $_POST['membre'], PDO::PARAM_INT);
+    $resultat -> bindParam(':id_membre', $_SESSION['membre']['id_membre'], PDO::PARAM_INT);
     $resultat -> bindParam(':id_produit', $_POST['id_produit'], PDO::PARAM_INT);
-    $resultat -> bindParam(':date_enregitrement', $_POST['date_enregitrement'], PDO::PARAM_STR);
+    $resultat -> bindParam(':date_enregistrement', $_POST['date_enregistrement'], PDO::PARAM_STR);
 
 
     if ($resultat -> execute()) {
@@ -115,24 +115,50 @@ require_once('../inc/header.inc.php');
 // Les lignes si dessous servent simplement d'éviter de mettre trop de PHP dans notre formulaire.
     $id_membre = (isset($commande_actuel)) ? $commande_actuel['id_membre'] : '';
     $id_produit = (isset($commande_actuel)) ? $commande_actuel['id_produit'] : '';
-    $_date_enregistrement = (isset($commande_actuel)) ? $commande_actuel['_date_enregistrement'] : '';
+    $date_enregistrement = (isset($commande_actuel)) ? $commande_actuel['date_enregistrement'] : '';
 
     $action = (isset($commande_actuel)) ? 'Modifier' : 'Ajouter';
-    $id_commande = (isset($commande_actuel)) ? $commande_actuel['id_membre'] : '';
+    $id_commande = (isset($commande_actuel)) ? $commande_actuel['id_commande'] : '';
 
     ?>
 
     <h2 style="text-align: center;">Ajouter une commande</h2>
     <div class="formulaire">
         <form method="post" action="" enctype="multipart/form-data" class="formulaire_modif">
+            <input type="hidden" name="id_commande" value="<?= $id_commande ?>">
             <label>Id membre : </label><br>
-            <input type="text" name="pseudo" value="<?= $id_membre ?>"><br><br>
 
+            <select name="id_membre" value="<?= $id_membre ?>">
+
+                <?php
+                $resultat = $pdo->query('SELECT * FROM membre');
+                while ($membre = $resultat->fetch()){
+
+                    ?>
+                    <option value="<?= $membre['id_membre']; ?>"><?= $membre['id_membre']; ?></option>
+                    <?php
+                }
+                ?>
+            </select><br><br>
             <label>Id produit : </label><br>
-            <input type="text" name="nom" value="<?= $id_produit ?>"><br><br>
+
+            <select name="id_produit" value="<?= $id_produit ?>">
+
+                <?php
+                $resultat = $pdo->query('SELECT * FROM produit');
+                while ($produit = $resultat->fetch()){
+
+                    ?>
+                    <option value="<?= $produit['id_produit']; ?>"><?= $produit['id_produit']; ?></option>
+                    <?php
+                }
+                ?>
+            </select><br><br>
+<!--            <p>Date: <input type="text" id="datepicker"></p>-->
+
 
             <label>Date d'enregistrement : </label><br>
-            <input type="text" name="prenom" value="<?= $_date_enregistrement ?>"><br><br>
+            <input type="text" name="date_enregistrement" value="<?= $date_enregistrement ?>"><br><br>
             <input type="submit" name="<?= $action ?>">
         </form>
     </div>
@@ -143,3 +169,8 @@ require_once('../inc/header.inc.php');
 //  Appel du footer
 require_once('../inc/footer.inc.php');
 ?>
+<!--<script>-->
+<!--    $( function() {-->
+<!--        $( "#datepicker" ).datepicker();-->
+<!--    } );-->
+<!--</script>-->

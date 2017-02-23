@@ -11,11 +11,11 @@ require_once('../inc/init.inc.php');
 if ($_POST) {
 
     if (isset($_GET['action']) && $_GET['action'] == 'modifier') {
-        $resultat = $pdo->prepare("REPLACE INTO avis (id_membre, id_salle, commentaire, note) VALUES(:id_membre, :commentaire,  :note)");
+        $resultat = $pdo->prepare("UPDATE avis SET id_membre=:id_membre, id_salle=:id_salle, commentaire=:commentaire, note=:note WHERE id_avis=:id_avis");
 
-        $resultat->bindParam(':id_membre', $_POST['id_membre'], PDO::PARAM_INT);
+        $resultat->bindParam(':id_avis', $_POST['id_avis'], PDO::PARAM_INT);
     } else {
-        $resultat = $pdo->prepare("INSERT INTO avis (id_membre, id_salle, commentaire, note) VALUES(:id_membre, :commentaire,  :note)");
+        $resultat = $pdo->prepare("INSERT INTO avis (id_membre, id_salle, commentaire, note) VALUES(:id_membre, :id_salle, :commentaire,  :note)");
     } // !!!!!!!!!!!!! FERMETURE DU ELSE !!!!!!!!!!!!!!
 
 
@@ -76,8 +76,8 @@ if (isset($_GET['action']) && $_GET['action'] == 'affichage') { //Si une action 
 
         }
         // En face de chaque enregistrements on ajoute deux actions : Modifier et supprimer en GET en précisant l4ID de chaque enregistrement.
-        $contenu .= '<td><a href="?action=modifier&id_avis=' . $avis['id_avis'] .'"><img src="' . RACINE_SITE . '../img/edit.png"</a></td>';
-        $contenu .= '<td><a href="?action=supprimer&id_avis=' . $avis['id_avis'] .'"><img src="' . RACINE_SITE . '../img/delete.png"</a></td>';
+        $contenu .= '<td><a href="?action=modifier&id_avis=' . $avis['id_avis'] .'"><img src="' . RACINE_SITE . '/img/edit.png"</a></td>';
+        $contenu .= '<td><a href="?action=supprimer&id_avis=' . $avis['id_avis'] .'"><img src="' . RACINE_SITE . '/img/delete.png"</a></td>';
         $contenu .= "</tr>";//Je ferme la ligne une fois j'ai parcouru chaque avis
     }
     $contenu .= "</table>";
@@ -126,11 +126,35 @@ require_once('../inc/header.inc.php');
     <h2 style="text-align: center;">Ajouter un avis</h2>
     <div class="formulaire">
         <form method="post" action="" enctype="multipart/form-data" class="formulaire_modif">
-            <label>ID membre : </label><br>
-            <input type="text" name="id_membre" value="<?= $id_membre ?>"><br><br>
+            <input type="hidden" name="id_avis" value="<?= $id_avis ?>">
+            <label>Id membre : </label><br>
 
-            <label>ID salle : </label><br>
-            <input type="text" name="id_salle" value="<?= $id_salle ?>"><br><br>
+            <select name="id_membre" value="<?= $id_membre ?>">
+
+                <?php
+                $resultat = $pdo->query('SELECT * FROM membre');
+                while ($membre = $resultat->fetch()){
+
+                    ?>
+                    <option value="<?= $membre['id_membre']; ?>"><?= $membre['id_membre']; ?></option>
+                    <?php
+                }
+                ?>
+            </select><br><br>
+            <label>Id salle : </label><br>
+
+            <select name="id_salle" value="<?= $id_salle ?>">
+
+                <?php
+                $resultat = $pdo->query('SELECT * FROM salle');
+                while ($salle = $resultat->fetch()){
+
+                    ?>
+                    <option value="<?= $salle['id_salle']; ?>"><?= $salle['id_salle']; ?></option>
+                    <?php
+                }
+                ?>
+            </select><br><br>
 
             <label>Commentaire : </label><br>
             <textarea name="commentaire" id="" cols="30" rows="10"><?= $commentaire ?></textarea><br><br>

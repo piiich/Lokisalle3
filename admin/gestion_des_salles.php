@@ -31,7 +31,7 @@ if ($_POST) {
     // Enregistrement dans la BDD
     // Depuis SQL 5.7, dans une requette REPLACE on ne peut peux plus mettre la clé primaire NULL ou vide. On doit donc faire une requête pour l'ajout et une requête pour la modif. D'où le if/else ci-dessous.
     if (isset($_GET['action']) && $_GET['action'] == 'modifier') {
-        $resultat = $pdo -> prepare("REPLACE INTO salle (id_salle, titre, description, pays, ville, adresse, cp, capacite, photo, categorie) VALUES(:id_salle,:pays, :description, :pays, :ville, :adresse, :cp, :capacite, '$nom_photo', :categorie)");
+        $resultat = $pdo -> prepare("UPDATE salle SET titre=:titre, description=:description, pays=:pays, ville=:ville, adresse=:adresse, cp=:cp, capacite=:capacite, photo=$nom_photo, categorie=:categorie WHERE id_salle=:id_salle");
 
         $resultat -> bindParam(':id_salle', $_POST['id_salle'], PDO::PARAM_INT);
     }
@@ -153,8 +153,9 @@ if (isset($_GET['id_salle']) && is_numeric($_GET['id_salle'])) { // Dans le cas 
 }
 // Si produit actuel existe (je suis dans le cadre d'une modif) alors je stock les valeurs des produits dans des variables (plus simples pour les afficher dasn les champs) sinon je stocke une valeur vide.
 // Les lignes si dessous servent simplement d'éviter de mettre trop de PHP dans notre formulaire.
+$id_salle = (isset($salle_actuelle)) ? $salle_actuelle['id_salle'] : '';
 $titre = (isset($salle_actuelle)) ? $salle_actuelle['titre'] : '';
-$description = (isset($salle_actuelle)) ? $salle_actuelle['descritpion'] : '';
+$description = (isset($salle_actuelle)) ? $salle_actuelle['description'] : '';
 $photo = (isset($salle_actuelle)) ? $salle_actuelle['photo'] : '';
 $pays = (isset($salle_actuelle)) ? $salle_actuelle['pays'] : '';
 $ville = (isset($salle_actuelle)) ? $salle_actuelle['ville'] : '';
@@ -164,11 +165,10 @@ $capacite = (isset($salle_actuelle)) ? $salle_actuelle['capacite'] : '';
 $categorie = (isset($salle_actuelle)) ? $salle_actuelle['categorie'] : '';
 
 $action = (isset($salle_actuelle)) ? 'Modifier' : 'Ajouter';
-$id_produit = (isset($salle_actuelle)) ? $salle_actuelle['id_produit'] : '';
 
 ?>
 
-<h2 style="text-align: center;">Ajouter un produit</h2>
+<h2 style="text-align: center;">Ajouter une salle</h2>
 <div class="formulaire">
     <form method="post" action="" enctype="multipart/form-data" class="formulaire_modif">
         <!-- L'attribut enctype permet de gérer les fichiers uploader et de traiter grâce à la super globale $_FILES-->
@@ -198,9 +198,9 @@ $id_produit = (isset($salle_actuelle)) ? $salle_actuelle['id_produit'] : '';
         <label>Catégorie : </label><br>
         <select name="categorie">
             <option>--Selectionnez--</option>
-            <option <?= ($categorie =='m') ? 'selected' : ''?> value="reunion">Réunion</option>
-            <option <?= ($categorie =='f') ? 'selected' : ''?> value="bureau">Bureau</option>
-            <option <?= ($categorie =='mixte') ? 'selected' : ''?> value="formation">Formation</option>
+            <option <?= ($categorie =='reunion') ? 'selected' : ''?> value="reunion">Réunion</option>
+            <option <?= ($categorie =='bureau') ? 'selected' : ''?> value="bureau">Bureau</option>
+            <option <?= ($categorie =='formation') ? 'selected' : ''?> value="formation">Formation</option>
         </select>
 
         <?php if (isset($salle_actuelle)) : ?>

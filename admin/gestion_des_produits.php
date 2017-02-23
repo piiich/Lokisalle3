@@ -11,7 +11,7 @@ require_once('../inc/init.inc.php');
 if ($_POST) {
 
     if (isset($_GET['action']) && $_GET['action'] == 'modifier') {
-        $resultat = $pdo->prepare("REPLACE INTO produit (id_salle, date_arrivee, date_depart, prix, etat) VALUES(:id_salle, :date_arrivee, :date_depart, :prix, :etat)");
+        $resultat = $pdo->prepare("UPDATE produit SET id_salle=:id_salle, date_arrivee=:date_arrivee, date_depart=:date_depart, prix=:prix, etat=:etat WHERE id_produit=:id_produit");
 
         $resultat->bindParam(':id_produit', $_POST['id_produit'], PDO::PARAM_INT);
     } else {
@@ -127,8 +127,22 @@ if(isset($_GET['action']) && ($_GET['action'] == 'ajout' || $_GET['action'] == '
     <h2 style="text-align: center;">Ajouter un produit</h2>
     <div class="formulaire">
         <form method="post" action="" enctype="multipart/form-data" class="formulaire_modif">
+            <input type="hidden" name="id_produit" value="<?= $id_produit ?>">
             <label>Id salle : </label><br>
-            <input type="text" name="id_salle" value="<?= $id_salle ?>"><br><br>
+
+            <select name="id_salle" value="<?= $id_salle ?>">
+
+            <?php
+            $resultat = $pdo->query('SELECT * FROM salle');
+            while ($salle = $resultat->fetch()){
+
+            ?>
+            <option value="<?= $salle['id_salle']; ?>"><?= $salle['id_salle']; ?></option>
+            <?php
+            }
+            ?>
+            </select><br><br>
+
 
             <label>Date d'arrivée : </label><br>
             <input type="text" name="date_arrivee" value=""><br><br>

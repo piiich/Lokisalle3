@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e9798554-c653-4f51-aa6c-21d2da1e0db1" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/gestion_des_avis.php" afterPath="$PROJECT_DIR$/admin/gestion_des_avis.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/gestion_des_commandes.php" afterPath="$PROJECT_DIR$/admin/gestion_des_commandes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/gestion_des_produits.php" afterPath="$PROJECT_DIR$/admin/gestion_des_produits.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/gestion_des_salles.php" afterPath="$PROJECT_DIR$/admin/gestion_des_salles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/gestion_membres.php" afterPath="$PROJECT_DIR$/admin/gestion_membres.php" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="gestion_des_commandes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/gestion_des_commandes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2754">
+              <caret line="126" column="93" lean-forward="true" selection-start-line="126" selection-start-column="93" selection-end-line="127" selection-end-column="80" />
+              <folding>
+                <marker date="1487864324428" expanded="true" signature="309:446" ph="UPDATE comma... " />
+                <marker date="1487864324428" expanded="true" signature="591:710" ph="INSERT INTO commande... " />
+                <marker date="1487864324428" expanded="true" signature="2184:2239" ph="SELECT * FRO... commande" />
+                <marker date="1487864324428" expanded="true" signature="2442:2483" ph="DELETE FROM " />
+                <marker date="1487864324428" expanded="true" signature="3077:3099" ph="SELECT * FRO... commande" />
+                <marker date="1487864324428" expanded="true" signature="3259:3278" ph="..." />
+                <marker date="1487864324428" expanded="true" signature="5724:5779" ph="SELECT * FRO... commande" />
+                <marker date="1487864324428" expanded="true" signature="7261:7281" ph="SELECT * FRO... membre" />
+                <marker date="1487864324428" expanded="true" signature="7735:7756" ph="SELECT * FRO... produit" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gestion_membres.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/admin/gestion_membres.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+              <folding>
+                <marker date="1487866750818" expanded="true" signature="307:452" ph="UPDATE membr... " />
+                <marker date="1487866750818" expanded="true" signature="586:721" ph="INSERT INTO membre... " />
+                <marker date="1487866750818" expanded="true" signature="2436:2485" ph="SELECT * FRO... membre" />
+                <marker date="1487866750818" expanded="true" signature="2684:2721" ph="DELETE FROM " />
+                <marker date="1487866750818" expanded="true" signature="3297:3317" ph="SELECT * FRO... membre" />
+                <marker date="1487866750818" expanded="true" signature="3477:3496" ph="..." />
+                <marker date="1487866750818" expanded="true" signature="5844:5893" ph="SELECT * FRO... membre" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gestion_des_salles.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/gestion_des_salles.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="170" column="49" lean-forward="false" selection-start-line="170" selection-start-column="49" selection-end-line="170" selection-end-column="49" />
+              <folding>
+                <marker date="1487865872997" expanded="true" signature="1804:1972" ph="UPDATE salle... " />
+                <marker date="1487865872997" expanded="true" signature="1804:1996" ph="UPDATE salle... " />
+                <marker date="1487865872997" expanded="true" signature="2135:2324" ph="INSERT INTO salle... " />
+                <marker date="1487865872997" expanded="true" signature="4171:4217" ph="SELECT * FRO... salle" />
+                <marker date="1487865872997" expanded="true" signature="5378:5413" ph="DELETE FROM " />
+                <marker date="1487865872997" expanded="true" signature="5981:6000" ph="SELECT * FRO... salle" />
+                <marker date="1487865872997" expanded="true" signature="6161:6180" ph="..." />
+                <marker date="1487865872997" expanded="true" signature="8833:8879" ph="SELECT * FRO... salle" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gestion_des_produits.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/admin/gestion_des_produits.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2703">
+              <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+              <folding>
+                <marker date="1487864856844" expanded="true" signature="305:420" ph="UPDATE produ... " />
+                <marker date="1487864856844" expanded="true" signature="305:449" ph="UPDATE produ... " />
+                <marker date="1487864856844" expanded="true" signature="585:715" ph="INSERT INTO produit... " />
+                <marker date="1487864856844" expanded="true" signature="2304:2356" ph="SELECT * FRO... produit" />
+                <marker date="1487864856844" expanded="true" signature="2557:2596" ph="DELETE FROM " />
+                <marker date="1487864856844" expanded="true" signature="3181:3202" ph="SELECT * FRO... produit" />
+                <marker date="1487864856844" expanded="true" signature="3362:3381" ph="..." />
+                <marker date="1487864856844" expanded="true" signature="5804:5856" ph="SELECT * FRO... produit" />
+                <marker date="1487864856844" expanded="true" signature="7428:7447" ph="SELECT * FRO... salle" />
+                <marker date="1487864856844" expanded="true" signature="8125:8178" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/admin/gestion_des_commandes.php" />
+        <option value="$PROJECT_DIR$/admin/gestion_des_produits.php" />
+        <option value="$PROJECT_DIR$/admin/gestion_des_salles.php" />
+        <option value="$PROJECT_DIR$/admin/gestion_des_avis.php" />
+        <option value="$PROJECT_DIR$/admin/gestion_membres.php" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
+    <include_path>
+      <path value="C:\xampp\php\PEAR" />
+    </include_path>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lokisalle3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lokisalle3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lokisalle3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lokisalle3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="inc" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lokisalle3" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Lokisalle3" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e9798554-c653-4f51-aa6c-21d2da1e0db1" name="Default" comment="" />
+      <created>1487859632956</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1487859632956</updated>
+      <workItem from="1487859634245" duration="6352000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6352000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24947807" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/inc/init.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/gestion_des_produits.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2703">
+          <caret line="131" column="0" lean-forward="true" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
+          <folding>
+            <marker date="1487864856844" expanded="true" signature="305:420" ph="UPDATE produ... " />
+            <marker date="1487864856844" expanded="true" signature="305:449" ph="UPDATE produ... " />
+            <marker date="1487864856844" expanded="true" signature="585:715" ph="INSERT INTO produit... " />
+            <marker date="1487864856844" expanded="true" signature="2304:2356" ph="SELECT * FRO... produit" />
+            <marker date="1487864856844" expanded="true" signature="2557:2596" ph="DELETE FROM " />
+            <marker date="1487864856844" expanded="true" signature="3181:3202" ph="SELECT * FRO... produit" />
+            <marker date="1487864856844" expanded="true" signature="3362:3381" ph="..." />
+            <marker date="1487864856844" expanded="true" signature="5804:5856" ph="SELECT * FRO... produit" />
+            <marker date="1487864856844" expanded="true" signature="7428:7447" ph="SELECT * FRO... salle" />
+            <marker date="1487864856844" expanded="true" signature="8125:8178" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/gestion_des_commandes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2754">
+          <caret line="126" column="93" lean-forward="true" selection-start-line="126" selection-start-column="93" selection-end-line="127" selection-end-column="80" />
+          <folding>
+            <marker date="1487864324428" expanded="true" signature="309:446" ph="UPDATE comma... " />
+            <marker date="1487864324428" expanded="true" signature="591:710" ph="INSERT INTO commande... " />
+            <marker date="1487864324428" expanded="true" signature="2184:2239" ph="SELECT * FRO... commande" />
+            <marker date="1487864324428" expanded="true" signature="2442:2483" ph="DELETE FROM " />
+            <marker date="1487864324428" expanded="true" signature="3077:3099" ph="SELECT * FRO... commande" />
+            <marker date="1487864324428" expanded="true" signature="3259:3278" ph="..." />
+            <marker date="1487864324428" expanded="true" signature="5724:5779" ph="SELECT * FRO... commande" />
+            <marker date="1487864324428" expanded="true" signature="7261:7281" ph="SELECT * FRO... membre" />
+            <marker date="1487864324428" expanded="true" signature="7735:7756" ph="SELECT * FRO... produit" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/gestion_des_salles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="170" column="49" lean-forward="false" selection-start-line="170" selection-start-column="49" selection-end-line="170" selection-end-column="49" />
+          <folding>
+            <marker date="1487865872997" expanded="true" signature="1804:1972" ph="UPDATE salle... " />
+            <marker date="1487865872997" expanded="true" signature="1804:1996" ph="UPDATE salle... " />
+            <marker date="1487865872997" expanded="true" signature="2135:2324" ph="INSERT INTO salle... " />
+            <marker date="1487865872997" expanded="true" signature="4171:4217" ph="SELECT * FRO... salle" />
+            <marker date="1487865872997" expanded="true" signature="5378:5413" ph="DELETE FROM " />
+            <marker date="1487865872997" expanded="true" signature="5981:6000" ph="SELECT * FRO... salle" />
+            <marker date="1487865872997" expanded="true" signature="6161:6180" ph="..." />
+            <marker date="1487865872997" expanded="true" signature="8833:8879" ph="SELECT * FRO... salle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/gestion_des_avis.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="128" column="72" lean-forward="true" selection-start-line="128" selection-start-column="72" selection-end-line="128" selection-end-column="72" />
+          <folding>
+            <marker date="1487866093116" expanded="true" signature="307:424" ph="UPDATE avis " />
+            <marker date="1487866093116" expanded="true" signature="554:663" ph="INSERT INTO avis... " />
+            <marker date="1487866093116" expanded="true" signature="2171:2214" ph="SELECT * FRO... avis" />
+            <marker date="1487866093116" expanded="true" signature="2409:2442" ph="DELETE FROM " />
+            <marker date="1487866093116" expanded="true" signature="2995:3013" ph="SELECT * FRO... avis" />
+            <marker date="1487866093116" expanded="true" signature="3173:3192" ph="..." />
+            <marker date="1487866093116" expanded="true" signature="5508:5551" ph="SELECT * FRO... avis" />
+            <marker date="1487866093116" expanded="true" signature="6988:7008" ph="SELECT * FRO... membre" />
+            <marker date="1487866093116" expanded="true" signature="7456:7475" ph="SELECT * FRO... salle" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/admin/gestion_membres.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="53" lean-forward="false" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+          <folding>
+            <marker date="1487866750818" expanded="true" signature="307:452" ph="UPDATE membr... " />
+            <marker date="1487866750818" expanded="true" signature="586:721" ph="INSERT INTO membre... " />
+            <marker date="1487866750818" expanded="true" signature="2436:2485" ph="SELECT * FRO... membre" />
+            <marker date="1487866750818" expanded="true" signature="2684:2721" ph="DELETE FROM " />
+            <marker date="1487866750818" expanded="true" signature="3297:3317" ph="SELECT * FRO... membre" />
+            <marker date="1487866750818" expanded="true" signature="3477:3496" ph="..." />
+            <marker date="1487866750818" expanded="true" signature="5844:5893" ph="SELECT * FRO... membre" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
